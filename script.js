@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
     // })
     
     let list = document.getElementById("faultyItems");
-    list.style.visibility = "visible";
+   list.style.visibility = "hidden";
 
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
@@ -29,17 +29,14 @@ window.addEventListener("load", function() {
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
     });
 
-    let pilotStatus = document.getElementById("pilotStatus");
-    pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+    // let pilotStatus = document.getElementById("pilotStatus");
+    // pilotStatus.innerHTML = `${pilot}.value`;
     
-    let copilotStatus = this.document.getElementById("coPilotStatus");
-    copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+    // let copilotStatus = document.getElementById("coPilotStatus");
+    // copilotStatus.innerHTML = "Co-pilot ${copilot} is ready for launch";
 
-    let = fuelStatus = document.getElementById("fuelStatus");
-    let = cargoStatus = document.getElementById("cargoStatus"); 
+ 
 
-    if (fuelLevel < 10000) {
-        list.style.visibility = "visible";
-        fuelStatus.innerHTML = "Fuel level too low for launch";
-    }
+
+
  }); 
