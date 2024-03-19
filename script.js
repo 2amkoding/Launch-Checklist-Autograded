@@ -42,4 +42,4 @@ window.addEventListener("load", function() {
         list.style.visibility = "visible";
         fuelStatus.innerHTML = "Fuel level too low for launch";
     }
- });
+ }); 
