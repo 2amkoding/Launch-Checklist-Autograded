@@ -41,16 +41,17 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         
  }
 
+ if (validateInput(pilot) === "Not a Number" && validateInput(copilot)=== "Not a Number" && validateInput(fuelLevel)=== "Is a Number" && validateInput(cargoMass)=== "Is a Number") {
 
-let pilotStatus = document.getElementById("pilotStatus");
-let copilotStatus = document.getElementById("copilotStatus");
-let fuelStatus = document.getElementById("fuelStatus");
-let cargoStatus = document.getElementById("cargoStatus"); 
-let h2 = document.getElementById("launchStatus");
+    let pilotStatus = document.getElementById("pilotStatus");
+    let copilotStatus = document.getElementById("copilotStatus");
+    let fuelStatus = document.getElementById("fuelStatus");
+    let cargoStatus = document.getElementById("cargoStatus"); 
+    let h2 = document.getElementById("launchStatus");
 
 
 
-if (fuelLevel < 10000) {
+    if (fuelLevel < 10000) {
     list.style.visibility = "visible";
     fuelStatus.innerHTML = "Fuel level too low for launch";
     h2.style.color = "red";
@@ -61,7 +62,7 @@ if (fuelLevel < 10000) {
 
 }
 
-if (cargoMass >  10000) {
+    if (cargoMass >  10000) {
     list.style.visibility = "visible";
     h2.style.color = "red";
     h2.innerHTML = "Shuttle Not Ready for Launch";
@@ -81,7 +82,7 @@ if (fuelLevel < 10000 &&  cargoMass > 10000) {
     fuelStatus.innerHTML = "Fuel level too low for launch";
 }
 
-if  (fuelLevel >= 10000 && cargoMass <= 10000) {
+    if  (fuelLevel >= 10000 && cargoMass <= 10000) {
     list.style.visibility = "visible";
     h2.style.color = "green";
     h2.innerHTML  = "Shuttle is Ready for Launch";
@@ -90,6 +91,11 @@ if  (fuelLevel >= 10000 && cargoMass <= 10000) {
     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch"`;
     copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
 }
+    
+}  
+
+
+
 
  }
 
