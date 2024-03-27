@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
        addDestinationInfo(document, planets.name, planets.diameter, planets.star, planets.distance, planets.moons, planets.image)
     })
 
-
+ 
     
     let list = document.getElementById("faultyItems");
     list.style.visibility = "hidden";
