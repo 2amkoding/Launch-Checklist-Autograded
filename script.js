@@ -1,6 +1,6 @@
 // Write your JavaScript code here!
 
-const { addDestinationInfo, myFetch } = require("./scriptHelper");
+//const { addDestinationInfo, myFetch } = require('./scriptHelper');
 
 window.addEventListener("load", function() {
 
@@ -16,8 +16,10 @@ window.addEventListener("load", function() {
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
         let planets = pickPlanet(listedPlanets);
         
-        addDestinationInfo(document, planets.name, diameter, star, distance, moons, imageUrl)
+       addDestinationInfo(document, planets.name, planets.diameter, planets.star, planets.distance, planets.moons, planets.image)
     })
+
+
     
     let list = document.getElementById("faultyItems");
     list.style.visibility = "hidden";

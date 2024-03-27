@@ -2,10 +2,11 @@
 
 require('cross-fetch/polyfill');
 
-function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
+
+function addDestinationInfo(document, name, diameter, star, distance, moons, image) {
     // Here is the HTML formatting for our mission target div.
-    let missionT = document.getElementById("missionTarget");
-    missionT.innerHTML = `
+     let missionT = document.getElementById("missionTarget");
+     missionT.innerHTML = (` 
                  <h2>Mission Destination</h2>
                  <ol>
                      <li>Name: ${name}</li>
@@ -14,10 +15,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                      <li>Distance from Earth: ${distance}</li>
                      <li>Number of Moons: ${moons}</li>
                  </ol>
-                 <img src="${imageUrl}">
-    `
-
-   
+                 <img src="${image}">
+                 `);
 
  }
  
@@ -104,13 +103,17 @@ if (fuelLevel < 10000 &&  cargoMass > 10000) {
  }
 
  async function myFetch() {
-     let planetsReturned = fetch("https://handlers.education.launchcode.org/static/planets.json");
+    let response = await fetch("https://handlers.education.launchcode.org/static/planets.json");
+    let data = await response.json();
+    return data;
+    
+    //  let planetsReturned;
  
-     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        return response.json();
-         });
+    //  planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+    //     return response.json();
+    //      });
  
-     return planetsReturned;
+    //  return planetsReturned;
  }
  
  function pickPlanet(planets) {
